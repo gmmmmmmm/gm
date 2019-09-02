@@ -39,6 +39,9 @@ public class BrandController {
     @PostMapping("")
     public ResponseEntity<Void> addBrand(Brand brand,@RequestParam("cids") List<Long> cids){
         brandService.addBrand(brand,cids);
+
+
+        System.out.print("fdfdfd");
         return ResponseEntity.status(HttpStatus.CREATED).build();
 
     }
@@ -55,6 +58,7 @@ public class BrandController {
         }
 
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
+
 
     }
 
