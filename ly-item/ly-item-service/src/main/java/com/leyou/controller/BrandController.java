@@ -40,7 +40,6 @@ public class BrandController {
     public ResponseEntity<Void> addBrand(Brand brand,@RequestParam("cids") List<Long> cids){
         brandService.addBrand(brand,cids);
 
-        System.out.print("fhh");
         return ResponseEntity.status(HttpStatus.CREATED).build();
 
     }
